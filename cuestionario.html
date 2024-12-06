@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li> <a href="index.html">Inicio </a></li>
+                <li> <a href="pelicula.html">EndGame </a></li>
+                <li> <a href="cuestionario.html">Cuestionario </a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+
+        <form id="form">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" name="nombre" required>
+            <br>
+
+            <label for="apellido">Apellido:</label>
+            <input type="text" id="apellido" name="apellido" required>
+            <br>
+
+            <label for="edad">Edad:</label>
+            <input type="number" id="edad" name="edad" required>
+            <br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+
+            <label for="peliculaFavorita">Película favorita:</label>
+            <select id="peliculaFavorita" name="peliculaFavorita" required>
+                <option value="">Selecciona una película</option>
+                <option value="Avengers: Endgame">Avengers: Endgame</option>
+                <option value="Black Panther">Black Panther</option>
+                <option value="Guardianes de the Galaxy">Guardianes de the Galaxy</option>
+                <option value="Avengers: Infinity War">Avengers: Infinity War</option>
+                <option value="Iron Man">Iron Man</option>
+                <option value="Captain America: The Winter Soldier">Captain America: The Winter Soldier</option>
+                <option value="Thor: Ragnarok">Thor: Ragnarok</option>
+                <option value="Captain America: Civil War">Captain America: Civil War</option>
+                <option value="Spider-Man: No Way Home">Spider-Man: No Way Home</option>
+            </select>
+            <br>
+
+            <label>Género favorito:</label>
+            <div id="divFormGeneroFav">
+                <input type="radio" id="accion" name="genero" value="accion">
+                <label for="accion">Acción</label>
+                <input type="radio" id="aventura" name="genero" value="aventura">
+                <label for="aventura">Aventura</label>
+                <input type="radio" id="cienciaFiccion" name="genero" value="ciencia-ficcion">
+                <label for="cienciaFiccion">Ciencia ficción</label>
+            </div>
+            <label>Películas vistas:</label><br>
+
+            <div class="divContainerCheck">
+                <div class="divCheck">
+                    <label for="avengersEndgame">Avengers: Endgame</label>
+                    <input type="checkbox" id="avengersEndgame" name="peliculasVistas" value="avengers-endgame">
+                </div>
+                <div class="divCheck">
+                    <label for="blackPanther">Black Panther</label>
+                    <input type="checkbox" id="blackPanther" name="peliculasVistas" value="black-panther">
+                </div>
+                <div class="divCheck">
+                    <label for="guardianesGalaxy">Guardianes de the Galaxy</label>
+                    <input type="checkbox" id="guardianesGalaxy" name="peliculasVistas" value="guardianes-galaxy">
+                </div>
+                <div class="divCheck">
+                    <label for="avengersInfinityWar">Avengers: Infinity War</label>
+                    <input type="checkbox" id="avengersInfinityWar" name="peliculasVistas"
+                        value="avengers-infinity-war">
+                </div>
+                <div class="divCheck">
+                    <label for="ironMan">Iron Man</label>
+                    <input type="checkbox" id="ironMan" name="peliculasVistas" value="iron-man">
+                </div>
+                <div class="divCheck">
+                    <label for="captainAmericaWinterSoldier">Captain America: The Winter Soldier</label>
+                    <input type="checkbox" id="captainAmericaWinterSoldier" name="peliculasVistas"
+                        value="captain-america-winter-soldier">
+                </div>
+                <div class="divCheck">
+                    <label for="thorRagnarok">Thor: Ragnarok</label>
+                    <input type="checkbox" id="thorRagnarok" name="peliculasVistas" value="thor-ragnarok">
+                </div>
+                <div class="divCheck">
+                    <label for="captainAmericaCivilWar">Captain America: Civil War</label>
+                    <input type="checkbox" id="captainAmericaCivilWar" name="peliculasVistas"
+                        value="captain-america-civil-war">
+                </div>
+                <div class="divCheck">
+                    <label for="spiderManNoWayHome">Spider-Man: No Way Home</label>
+                    <input type="checkbox" id="spiderManNoWayHome" name="peliculasVistas"
+                        value="spider-man-no-way-home">
+                </div>
+            </div>
+            <label for="comentarios">Comentarios:</label>
+            <textarea id="comentarios" name="comentarios" rows="4" cols="30"></textarea>
+            <br>
+            <button class="buttonSubmit" type="submit">Enviar</button>
+        </form>
+    </main>
+    <footer id="footer">
+        <p> Llanes Alan Jesus</p>
+    </footer>
+
+</body>
+
+</html>
