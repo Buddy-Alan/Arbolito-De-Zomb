@@ -25,11 +25,11 @@ body ul {
 
 span {
     font-family: 'Righteous', cursive;
-    color: blue;
+    /* color: blue;*/
 }
 
 #imgPrincpal {
-    width: 80vw;
+    width: 40vw;
     margin-top: 1rem;
     margin: auto;
 }
