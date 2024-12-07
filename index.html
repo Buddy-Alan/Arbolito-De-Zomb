@@ -35,9 +35,7 @@
 
         </ul>
     </main>
-    <!-- <footer id="footer">
-        <p>Llanes Alan Jesus</p>
-    </footer> -->
+
 
 
     <footer id="footer">
@@ -90,60 +88,7 @@
 
 
 
-                <script>
-        // Simulando un archivo JSON con nombres
-        const contribuciones = [
-            { "nombre": "Juan" },
-            { "nombre": "Carlos" },
-            { "nombre": "Ricardo" },
-            { "nombre": "Lucia" },
-            { "nombre": "Ana" },
-            { "nombre": "María" }
-        ];
-
-        // Seleccionar la lista
-        const listaIndex = document.getElementById("listaIndex");
-
-  let lastRegalo = null; // Variable para almacenar el último número generado
-
-function getRandomRegalo() {
-    let newRegalo;
-    let attempts = 0; // Contador de intentos
-    do {
-        newRegalo = Math.floor(Math.random() * 4) + 1; // Generar un número aleatorio entre 1 y 4
-        attempts++;
-        // Salir del bucle si lleva demasiados intentos (evita un bucle infinito)
-        if (attempts > 10) break;
-    } while (newRegalo === lastRegalo);
-    lastRegalo = newRegalo; // Actualizar el último número generado
-    return newRegalo;
-}
-
-
-        // Crear elementos dinámicamente
-        contribuciones.forEach(contribucion => {
-            // Crear el <li>
-            const li = document.createElement("li");
-            li.classList.add("col-3", "col-m-5", "col-s-12");
-
-            // Número aleatorio para la imagen del regalo
-            const numeroRegalo = getRandomRegalo();
-
-            // Crear la imagen del regalo
-            const img = document.createElement("img");
-            img.src = `./Imagenes/Regalo/regalo${numeroRegalo}.png`;
-            img.alt = `regalo${numeroRegalo}`;
-
-            // Crear el título con el mensaje
-            const h3 = document.createElement("h3");
-            h3.textContent = `${contribucion.nombre}, Gracias por tu aporte al arbolito`;
-
-            // Armar la estructura
-            li.appendChild(img);
-            li.appendChild(h3);
-            listaIndex.appendChild(li);
-        });
-    </script>
+           <script type="module" src="./Script/crearElementosDinamicos.js"></script>
 
 </body>
 
