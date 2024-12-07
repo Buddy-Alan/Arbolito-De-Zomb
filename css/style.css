@@ -417,6 +417,11 @@ input[type="checkbox"] {
 }
 
 @media only screen and (max-width: 1500px) {
+    #imgPrincpal {
+        width: 90vh;
+        margin-top: 1rem;
+        margin: auto;
+    }
 
     #listaIndex li {
         text-align: center;
@@ -517,9 +522,18 @@ input[type="checkbox"] {
 
 
 @media only screen and (max-width: 900px) {
+    #imgPrincpal {
+        width: 100vh
+    }
 
-    #divTablePelicula table {
-        width: 85vw;
+    #TituloPrincipal {
+        font-size: calc(1rem + 0.5vw);
+
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        line-height: 1.5;
+
     }
 
     /* For tablets: */
@@ -625,6 +639,18 @@ input[type="checkbox"] {
         text-align: center;
         font-size: calc(5px + 0.5vw);
         margin: 2rem;
+    }
+
+    #listaIndex {
+        margin: auto;
+        width: 90%;
+        margin-bottom: 6rem;
+    }
+
+    #listaIndex li {
+        text-align: center;
+        font-size: calc(5px + 0.5vw);
+        margin: 0.5rem;
     }
 
 
