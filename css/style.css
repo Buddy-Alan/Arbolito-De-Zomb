@@ -65,7 +65,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
 }
 
 #listaIndex li {
@@ -181,23 +181,14 @@ th {
     padding: 2rem;
 }
 
-.audio {
-    width: 90vw;
-    height: 7vh;
-    font-size: calc(9px + 0.6vw);
-}
 
-#controlsAudio {
-    float: left;
-    position: fixed;
-    bottom: 1px;
-    left: 1px;
-    z-index: 9999;
-}
 
-.sticky {
-    position: sticky !important;
-}
+
+
+
+
+
+
 
 
 #form {
@@ -298,13 +289,58 @@ input[type="checkbox"] {
     display: flex;
 }
 
-/*
-#footer {
-    margin-top: auto;
+.audio p {
+    width: 100%;
 }
-*/
 
-/* Estilo general del footer */
+.audio {
+    width: 90vw;
+    height: 7vh;
+    font-size: calc(9px + 0.6vw);
+}
+
+.audio-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.audio-section audio {
+    width: 250px;
+    /* Ancho del reproductor de audio */
+    border-radius: 5px;
+    /* Borde redondeado */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Sombra alrededor */
+}
+
+/* Audio flotante */
+#controlsAudio {
+    position: fixed;
+    /* Fijo mientras se hace scroll */
+    bottom: 50px;
+    /* Altura por encima del footer */
+    left: 10px;
+    /* Separado del borde izquierdo */
+    z-index: 9999;
+    /* Siempre por encima */
+    padding: 5px;
+    border-radius: 8px;
+    /* Opcional: bordes redondeados */
+    /* Sombra */
+}
+
+/* Audio cuando llega al footer */
+#controlsAudio.sticky {
+    position: static;
+    /* Cambia al flujo normal */
+    margin: 0 auto;
+    /* Centrado automáticamente */
+    box-shadow: none;
+    /* Sin sombra */
+}
+
 #footer {
     position: fixed;
     bottom: 0;
@@ -314,18 +350,51 @@ input[type="checkbox"] {
     color: #fff;
     /* Texto claro */
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    /* Coloca el audio arriba y el resto abajo */
     align-items: center;
     padding: 10px 0;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
     /* Sombra */
     z-index: 1000;
-    /* Asegura que esté siempre encima */
 }
 
-/* Estilo para cada sección del footer */
+/* Contenedor del audio */
+.footer-audio {
+    width: 100%;
+    /* Ocupa todo el ancho del footer */
+    display: flex;
+    justify-content: center;
+    /* Centra el reproductor */
+    margin-bottom: 10px;
+    /* Espacio entre el audio y el resto */
+}
+
+.footer-audio audio {
+    width: 90%;
+    /* Ancho del reproductor de audio */
+    max-width: 400px;
+    /* Tamaño máximo */
+    border-radius: 5px;
+    /* Bordes redondeados */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+    /* Sombra */
+}
+
+/* Contenedor de las secciones (Mail, Twitch e Instagram) */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    /* Distribuye horizontalmente */
+    width: 100%;
+    align-items: center;
+}
+
+/* Estilo para cada sección */
 .footer-section {
     text-align: center;
+    flex: 1;
+    /* Hace que cada sección ocupe el mismo espacio */
 }
 
 /* Iconos en el footer */
@@ -353,6 +422,7 @@ input[type="checkbox"] {
     text-decoration: underline;
     /* Subrayado al pasar el mouse */
 }
+
 
 
 
@@ -605,9 +675,6 @@ input[type="checkbox"] {
         margin-bottom: 0.2rem;
     }
 
-    .audio p {
-        width: 100%;
-    }
 
     .videoIntro,
     .trailerIframePelicula {

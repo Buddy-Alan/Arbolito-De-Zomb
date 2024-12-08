@@ -25,11 +25,9 @@
         FELIZ NAVIDAD<br>
         & PROSPERO AÑO NUEVO
     </h1>
-
-                    <!-- <img src="./Imagenes/Titulo.png" class="img-fluid" id="imgTitutlo" alt="arbolito"> -->
-
-
-        <div class="Principal">
+    
+    
+    <div class="Principal">
             <img src="./Imagenes/arbolito2.png" class="img-fluid" id="imgPrincpal" alt="arbolito">
             </div>
 
@@ -40,57 +38,79 @@
 
 
 
-    <footer id="footer">
-    <div class="footer-section">
-        <p>Alan@gmail.com</p>
+<footer id="footer">
+    <div class="footer-audio">
+        <audio src="./Audio/Jingle Bells (Instrumental).mp3" autoplay controls></audio>
     </div>
-    <div class="footer-section">
-        <a href="https://www.instagram.com/zombcher/" target="_blank">
-            <img src="./Imagenes/IconosFooter/instagram.png" alt="Instagram" class="footer-icon">
-            <span>Instagram</span>
-        </a>
-    </div>
-    <div class="footer-section">
-        <a href="https://www.twitch.tv/zombcher" target="_blank">
-            <img src="./Imagenes/IconosFooter/twitch.png" alt="Twitch" class="footer-icon">
-            <span>Twitch</span>
-        </a>
+    <div class="footer-content">
+        <div class="footer-section">
+            <p>Para Contactos o informacion: Alan@gmail.com</p>
+        </div>
+        <div class="footer-section">
+            <a href="https://www.instagram.com/zombcher/" target="_blank">
+                <img src="./Imagenes/IconosFooter/instagram.png" alt="Instagram" class="footer-icon">
+                <span>Instagram</span>
+            </a>
+        </div>
+        <div class="footer-section">
+            <a href="https://www.twitch.tv/zombcher" target="_blank">
+                <img src="./Imagenes/IconosFooter/twitch.png" alt="Twitch" class="footer-icon">
+                <span>Twitch</span>
+            </a>
+        </div>
     </div>
 </footer>
 
 
-    <!-- <script>
-        const nuevoDivAudio = document.querySelector(".audio")
-        actualizarAudio = () => {
-            nuevoDivAudio.innerHTML = `
-        <p>Soundtrack Alan Silvestri - The Avengers <a href="https://www.youtube.com/watch?v=GPYSQpcG1j8&ab_channel=AlanSilvestri-Topic" target="_blank"> Ir al sitio</a></p>
-        <div id="controlsAudio" >
-            <audio  src="./Audio/The Avengers.mp3" autoplay controls ></audio>
-        </div>
-            `
-        }
-        setTimeout(() => { actualizarAudio() }, 40000)
-
-        window.addEventListener('scroll', () => {
-            const audio = document.querySelector("#controlsAudio")
-            const footerContainer = document.querySelector('#footer')
-            const footerPosicion = footerContainer.getBoundingClientRect().top
-            if (footerPosicion <= window.innerHeight) {
-                audio.classList.add('sticky');
-            } else {
-                audio.classList.remove('sticky');
-            }
-        });
 
 
-    </script> -->
+<script>
+    const nuevoDivAudio = document.querySelector(".audio");
+
+    // Función para actualizar y mostrar el audio
+    const actualizarAudio = () => {
+        nuevoDivAudio.innerHTML = `
+            <div id="controlsAudio">
+                <audio src="./Audio/Jingle Bells (Instrumental).mp3" autoplay controls></audio>
+            </div>
+        `;
+    };
+
+    setTimeout(() => {
+        actualizarAudio();
+    }, 4000);
+window.addEventListener("scroll", () => {
+    const audio = document.querySelector("#controlsAudio");
+    const footer = document.querySelector("#footer");
+    const footerPosition = footer.getBoundingClientRect().top;
+    const audioHeight = audio.offsetHeight;
+
+    if (footerPosition <= window.innerHeight - audioHeight) {
+        audio.style.position = "absolute"; 
+        audio.style.bottom = `${window.innerHeight - footerPosition}px`;
+    } else {
+        audio.style.position = "fixed"; 
+        audio.style.bottom = "50px"; 
+
+    }
+}  );
+
+
+</script>
+
+
+
+
+
+
+
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
             crossorigin="anonymous"></script>
 
 
 
-           <script type="module" src="./Script/crearElementosDinamicos.js"></script>
+        <script type="module" src="./Script/crearElementosDinamicos.js"></script>
 
 </body>
 
