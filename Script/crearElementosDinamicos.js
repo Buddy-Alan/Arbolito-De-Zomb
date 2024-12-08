@@ -5,23 +5,23 @@ document.addEventListener("DOMContentLoaded", () => {
     fetch(url)
         .then(response => response.text())
         .then(data => {
-            console.log("Contenido del CSV:");
-            console.log(data); // Ver los datos sin procesar
+            // console.log("Contenido del CSV:");
+            // console.log(data); // Ver los datos sin procesar
 
             // Separar por líneas
             const rows = data.split("\n").map(row => row.trim());
-            console.log("Filas después de separar por líneas:", rows);
+            // console.log("Filas después de separar por líneas:", rows);
 
             // Usar la primera fila como encabezado
             const headers = rows[0].split(",");
-            console.log("Encabezado detectado:", headers);
+            // console.log("Encabezado detectado:", headers);
 
             // Crear los objetos con base en las filas restantes
             const contribuciones = rows.slice(1) // Evitar la primera fila (encabezado)
                 .filter(row => row !== "") // Filtrar filas vacías
                 .map(row => {
                     const values = row.split(","); // Dividir la fila en valores
-                    console.log("Valores de fila:", values);
+                    // console.log("Valores de fila:", values);
                     return {
                         nombre: values[0] // Usar el primer valor de la fila como 'nombre'
                     };

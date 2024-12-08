@@ -65,7 +65,7 @@ h1 {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-bottom: 7rem;
+    margin-bottom: 10rem;
 }
 
 #listaIndex li {
@@ -180,13 +180,6 @@ th {
 .backgroundPelicula {
     padding: 2rem;
 }
-
-
-
-
-
-
-
 
 
 
