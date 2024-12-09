@@ -721,6 +721,10 @@ input[type="checkbox"] {
         object-fit: cover;
     }
 
+    #footer {
+        font-size: calc(12.5px + 0.7vw)
+    }
+
 }
 
 /* Adaptabilidad para dispositivos pequeños */

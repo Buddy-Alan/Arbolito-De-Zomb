@@ -6,8 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
         .then(response => response.text())
         .then(data => {
             // console.log("Contenido del CSV:");
-            // console.log(data); // Ver los datos sin procesar
-
+            // console.log(data); // Ver los datos sin procesarg
             // Separar por líneas
             const rows = data.split("\n").map(row => row.trim());
             // console.log("Filas después de separar por líneas:", rows);
